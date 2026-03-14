@@ -308,6 +308,7 @@ async function loginUser(){
     const error = document.getElementById("errorMsg");
 
     if (username === "test" && password === "test") {
+        localStorage.setItem("cyberLoggedIn", "true");
         localStorage.setItem("user_id", "test");
         window.location.href="pages/cyberspace.html";
         return;
@@ -321,6 +322,7 @@ async function loginUser(){
         });
 
         if(result.success){
+            localStorage.setItem("cyberLoggedIn", "true");
             localStorage.setItem("user_id", result.user_id);
             window.location.href="pages/cyberspace.html";
         }
