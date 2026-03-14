@@ -12,7 +12,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('../assets/images/background.jpg') no-repeat center center fixed;
+            background: url('assets/images/background.jpg') no-repeat center center fixed;
             background-size: cover;
             font-family: 'Rajdhani', sans-serif;
             display: flex;
@@ -297,7 +297,7 @@
         </div>
     </div>
 
-    <script src="api.js"></script>
+    <script src="pages/api.js"></script>
 
 <script>
 
@@ -309,7 +309,7 @@ async function loginUser(){
 
     if (username === "test" && password === "test") {
         localStorage.setItem("user_id", "test");
-        window.location.href="cyberspace.html";
+        window.location.href="pages/cyberspace.html";
         return;
     }
 
@@ -322,7 +322,7 @@ async function loginUser(){
 
         if(result.success){
             localStorage.setItem("user_id", result.user_id);
-            window.location.href="cyberspace.html";
+            window.location.href="pages/cyberspace.html";
         }
         else{
             error.style.opacity = "1";
